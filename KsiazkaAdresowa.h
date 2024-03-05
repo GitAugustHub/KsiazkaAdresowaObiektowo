@@ -2,7 +2,6 @@
 #define KSIAZKAADRESOWA_H
 
 #include <iostream>
-
 #include "UzytkownikMenedzer.h"
 
 using namespace std;

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include <windows.h>
+#include <stdio.h> // zamiast <windows.h>
 #include <fstream>
 #include <sstream>
 

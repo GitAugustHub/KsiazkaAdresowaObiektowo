@@ -3,3 +3,7 @@ obj/
 plan/
 02-ks-obiekt.*
 Uzytkownicy.txt
+.DS_Store
+.vscode/
+main
+main.dSYM/
