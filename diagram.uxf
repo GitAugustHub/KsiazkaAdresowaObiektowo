@@ -77,4 +77,11 @@ konwerjsaIntNaString() : String</panel_attributes><additional_attributes></addit
 - czyPlikJestPusty() : Bool
 - zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami() : String
 - pobierzLiczbe() : String
-- pobierzDaneAdresata() : Adresat</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+- pobierzDaneAdresata() : Adresat
+- pobierzAdresataZDanychOddzielonychPionowymiKreskami() : Integer
+- pobierzUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
+- zwrocNumerLiniiSzukanegoAdresata() : Integer
+- usunWybranaLinieWPliku() : void
+- pobierzZPlikuIdOstatniegoAdresata() : Integer
+- usunPlik() : void
+- zmienNazwePliku() : void</panel_attributes><additional_attributes></additional_attributes></element></diagram>
