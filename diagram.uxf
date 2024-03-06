@@ -62,7 +62,7 @@ konwerjsaIntNaString() : String</panel_attributes><additional_attributes></addit
 - wyswietlDaneAdresata() : void
 - wyswietlIloscWyszukanychAdresatow() : void
 - podajIdWybranegoAdresata() : Integer
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>480</y><w>290</w><h>170</h></coordinates><panel_attributes>PlikZAdresatami
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>480</y><w>290</w><h>410</h></coordinates><panel_attributes>PlikZAdresatami
 --
 - NAZWA_PLIKU_Z_ADRESATAMI : String
 - idOstatniegoAdresata : Integer
