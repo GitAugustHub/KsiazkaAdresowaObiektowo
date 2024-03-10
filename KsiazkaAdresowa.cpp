@@ -16,14 +16,23 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     idZalogowanegoUzytkownika = pobierzIdZalogowanegoUzytkownika();
 }
 
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        return true;
+    }
+    else return false;
+}
+
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMeneger.dodajAdresata();
+    adresatMeneger->dodajAdresata(); // dlaczego tak?
 }
 
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 {
-    return uzytkownikMenedzer.przekazIdZalogowanegoUzytkownika();
+    return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 }
 
 int KsiazkaAdresowa::przekazIdZalogowanegoUzytkownika()

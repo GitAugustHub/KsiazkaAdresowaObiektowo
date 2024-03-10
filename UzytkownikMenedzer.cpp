@@ -54,9 +54,9 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
     return false;
 }
 
-vector <Uzytkownik> UzytkownikMenedzer::wczytajUzytkownikowZPliku()
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
 {
-    return plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
@@ -103,7 +103,13 @@ void UzytkownikMenedzer::logowanieUzytkownika()
     cin.get();
 }
 
-int UzytkownikMenedzer::przekazIdZalogowanegoUzytkownika()
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweId)
+{
+    if(noweId >= 0)
+        idZalogowanegoUzytkownika = noweId;
 }

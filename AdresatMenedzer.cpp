@@ -1,12 +1,12 @@
 #include "AdresatMenedzer.h"
 #include "KsiazkaAdresowa.h"
 
-Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
     MetodyPomocnicze metodyPomocnicze;
 
-    adresat.ustawId(++idOstatniegoAdresata);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
 
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
 
@@ -35,9 +35,9 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, 
     return adresat;
 }
 
-void AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
+int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
-    idZalogowanegoUzytkownika = uzytkownikMenedzer.przekazIdZalogowanegoUzytkownika();
+    return idZalogowanegoUzytkownika;
 }
 
 int AdresatMenedzer::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
@@ -57,10 +57,20 @@ int AdresatMenedzer::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(strin
     return idAdresata;
 }
 
-void pobierzAdresatowZalogowanegoUzytkownikaZPliku()
+void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    adresaci = 
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }
-void wyswietlDaneAdresata();
+
+void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
+{
+    cout << endl << "Id:         " << adresat.pobierzId() << endl;
+    cout << "Imie:               " << adresat.pobierzImie() << endl;
+    cout << "Nazwisko:           " << adresat.pobierzNazwisko() << endl;
+    cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
+    cout << "Email:              " << adresat.pobierzEmail() << endl;
+    cout << "Adres:              " << adresat.pobierzAdres() << endl;
+}
+
 void wyswietlWyszukanychAdresatow();
 int podajIdWybranegoAdresata();
