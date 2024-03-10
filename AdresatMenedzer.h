@@ -22,7 +22,6 @@ class AdresatMenedzer
 
     Adresat podajDaneNowegoAdresata(); 
     void wyswietlDaneAdresata(Adresat adresat);
-    void wyswietlWyszukanychAdresatow();
     int podajIdWybranegoAdresata();
 
 public:

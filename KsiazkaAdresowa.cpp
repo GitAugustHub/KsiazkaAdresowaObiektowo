@@ -27,7 +27,7 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMeneger->dodajAdresata(); // z uwagi na AdresatMeneger *KsiazkaAdresowa::adresatMeneger
+    adresatMenedzer -> dodajAdresata(); // z uwagi na AdresatMeneger *KsiazkaAdresowa::adresatMeneger
 }
 
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
@@ -38,4 +38,9 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 int KsiazkaAdresowa::przekazIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+void KsiazkaAdresowa::wyswietlAdresatow()
+{
+    adresatMenedzer -> wyswietlWszystkichAdresatow();
 }

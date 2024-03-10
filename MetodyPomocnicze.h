@@ -13,6 +13,7 @@ public:
     int konwersjaStringNaInt(string liczba);
     string wczytajLinie();
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    int wczytajLiczbeCalkowita();
 };
 
 #endif

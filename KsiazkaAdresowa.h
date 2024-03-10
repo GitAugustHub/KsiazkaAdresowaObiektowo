@@ -10,7 +10,7 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer *adresatMeneger; // dlaczego musi tu być * ? ponieważ pojawia się błąd <no default constructor exists for class "AdresatMenedzer">
+    AdresatMenedzer *adresatMenedzer; // dlaczego musi tu być * ? ponieważ pojawia się błąd <no default constructor exists for class "AdresatMenedzer">
     PlikZAdresatami plikZAdresatami;
     int idZalogowanegoUzytkownika;
 
@@ -25,6 +25,7 @@ public:
     void dodajAdresata();
     int pobierzIdZalogowanegoUzytkownika();
     int przekazIdZalogowanegoUzytkownika();
+    void wyswietlAdresatow();
 };
 
 #endif
