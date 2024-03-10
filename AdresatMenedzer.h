@@ -18,8 +18,9 @@ class AdresatMenedzer
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
+    UzytkownikMenedzer uzytkownikMenedzer;
 
-    Adresat podajDaneNowegoAdresata();
+    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
     void wyswietlDaneAdresata();
     void wyswietlWyszukanychAdresatow();
     int podajIdWybranegoAdresata();
@@ -27,13 +28,16 @@ class AdresatMenedzer
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) 
     {
-        plikZAdresatami.wczytajAdresatowZPliku();
+        plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void pobierzIdZalogowanegoUzytkownika();
     // nalezy utworzyc setter dla pola idZalogowanego Uzytkownika w tej klasie
-    // nalezy utworzyc publiczna metode pobierzAdresatowZalogowanegoUzytkownikaZPliku() i wywolac ja w metodzie logowanieUzytkownika() w klasie KsiazkaAdresowa - po ustawieniu idZUw klasieAdresatMenedzer
+    void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
+    // i wywolac ja w metodzie logowanieUzytkownika() w klasie KsiazkaAdresowa - po ustawieniu idZUw klasieAdresatMenedzer
 
 };
 

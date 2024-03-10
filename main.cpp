@@ -9,7 +9,7 @@ int main()
     KsiazkaAdresowa ksiazkaAdresowa("/Users/macbook/Desktop/PROGRAM/PROJEKTY/C++_projekty/16_KsiazkaAdresowaObiektowoProjektArtura/Uzytkownicy.txt");
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     return 0;
 }

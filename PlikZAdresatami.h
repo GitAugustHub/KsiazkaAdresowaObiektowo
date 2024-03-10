@@ -13,25 +13,27 @@ using namespace std;
 
 class PlikZAdresatami
 {
-    const string nazwaPlikuZAdresatami;
+    const string nazwaPlikuZAdresatami = "Adresaci.txt";
+    const string nazwaTymczasowegoPlikuZAdresatami = "TymczasowiAdresaci.txt";
     int idOstatniegoAdresata;
     bool czyPlikJestPusty();
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    string pobierzLiczbe();
-    Adresat pobierzDaneAdresata();
-    int pobierzUzytkownikaZDanychOddzielonychPionowymiKreskami();
-    int zwrocNumerLiniiSzukanegoAdresata();
-    void usunWybranaLinieWPliku();
+    Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    // int pobierzUzytkownikaZDanychOddzielonychPionowymiKreskami();
+    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
     int pobierzZPlikuIdOstatniegoAdresata();
-    void usunPlik();
-    void zmienNazwePliku();
+    void usunPlik(string nazwaPlikuZRozszerzeniem); // moze przeniesc do metodPomocniczych?
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa); // moze przeniesc do metodPomocniczych?
     
 public:
     PlikZAdresatami(string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {}; // konstruktor z dostepem do chronionej nazwy pliku
     void dopiszAdresataDoPliku();
-    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku; 
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika); 
     int pobierzIdOstatniegoAdresata();
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     void usunAdresata();
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     
 };
 

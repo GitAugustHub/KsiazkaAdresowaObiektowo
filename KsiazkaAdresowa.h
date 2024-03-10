@@ -14,12 +14,16 @@ class KsiazkaAdresowa
     int idZalogowanegoUzytkownika;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) 
+    {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
+    void dodajAdresata();
+    int pobierzIdZalogowanegoUzytkownika();
+    int przekazIdZalogowanegoUzytkownika();
 };
 
 #endif

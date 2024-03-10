@@ -1,6 +1,7 @@
 #include "AdresatMenedzer.h"
+#include "KsiazkaAdresowa.h"
 
-Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
 {
     Adresat adresat;
     MetodyPomocnicze metodyPomocnicze;
@@ -34,7 +35,32 @@ Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoA
     return adresat;
 }
 
+void AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
+{
+    idZalogowanegoUzytkownika = uzytkownikMenedzer.przekazIdZalogowanegoUzytkownika();
+}
 
+int AdresatMenedzer::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
+{
+    MetodyPomocnicze metodyPomocnicze;
+    int pozycjaRozpoczeciaIdUzytkownika = daneJednegoAdresataOddzielonePionowymiKreskami.find_first_of('|') + 1;
+    int idUzytkownika = metodyPomocnicze.konwersjaStringNaInt(metodyPomocnicze.pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdUzytkownika));
+
+    return idUzytkownika;
+}
+
+int AdresatMenedzer::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
+{
+    MetodyPomocnicze metodyPomocnicze;
+    int pozycjaRozpoczeciaIdAdresata = 0;
+    int idAdresata = metodyPomocnicze.konwersjaStringNaInt(metodyPomocnicze.pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
+    return idAdresata;
+}
+
+void pobierzAdresatowZalogowanegoUzytkownikaZPliku()
+{
+    adresaci = 
+}
 void wyswietlDaneAdresata();
 void wyswietlWyszukanychAdresatow();
 int podajIdWybranegoAdresata();
