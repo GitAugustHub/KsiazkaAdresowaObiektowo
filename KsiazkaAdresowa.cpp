@@ -12,8 +12,35 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    idZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
-    cout << idZalogowanegoUzytkownika;
-    cin.get();
-    // w tym miejscu UzytkownikManager powinien pobrac idZalogowanegoUzytkownika przy pomocy gettera
+    uzytkownikMenedzer.logowanieUzytkownika();
+    idZalogowanegoUzytkownika = pobierzIdZalogowanegoUzytkownika();
+}
+
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        return true;
+    }
+    else return false;
+}
+
+void KsiazkaAdresowa::dodajAdresata()
+{
+    adresatMenedzer -> dodajAdresata(); // z uwagi na AdresatMeneger *KsiazkaAdresowa::adresatMeneger
+}
+
+int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
+{
+    return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
+}
+
+int KsiazkaAdresowa::przekazIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
+
+void KsiazkaAdresowa::wyswietlAdresatow()
+{
+    adresatMenedzer -> wyswietlWszystkichAdresatow();
 }

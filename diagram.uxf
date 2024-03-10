@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>280</x><y>10</y><w>290</w><h>110</h></coordinates><panel_attributes>KsiazkaAdresowa
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>280</x><y>0</y><w>290</w><h>110</h></coordinates><panel_attributes>KsiazkaAdresowa
 --
 - idOstatniegoAdresata : Integer
 - idUsunietegoAdresata : Integer
@@ -8,11 +8,11 @@
 + KsiazkaAdresowa()
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>500</y><w>100</w><h>90</h></coordinates><panel_attributes>Uzytkownik
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>340</y><w>100</w><h>90</h></coordinates><panel_attributes>Uzytkownik
 --
 id : Integer
 login : String
-haslo : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>160</y><w>320</w><h>290</h></coordinates><panel_attributes>UzytkownikManager
+haslo : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>150</y><w>320</w><h>290</h></coordinates><panel_attributes>UzytkownikManager
 --
 - idZalogowanegoUzytkownika : Integer
 - uzytkownicy : vector &lt;Uzytkownik&gt; 
@@ -32,7 +32,7 @@ haslo : String</panel_attributes><additional_attributes></additional_attributes>
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika() : Integer
 - czyIstniejeLogin() : Bool  - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>480</y><w>320</w><h>150</h></coordinates><panel_attributes>PlikZUzytkownikami
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>470</y><w>320</w><h>150</h></coordinates><panel_attributes>PlikZUzytkownikami
 --
 - NAZWA_PLIKU_Z_UZYTKOWNIKAMI : String
 --
@@ -44,10 +44,10 @@ haslo : String</panel_attributes><additional_attributes></additional_attributes>
 - czyPlikJestPusty() : Bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String
 - pobierzDaneUzytkownika() : Uzytkownik
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>270</y><w>200</w><h>60</h></coordinates><panel_attributes>MetodyPomocnicze
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>260</y><w>200</w><h>60</h></coordinates><panel_attributes>MetodyPomocnicze
 --
 --
-konwerjsaIntNaString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>160</y><w>290</w><h>280</h></coordinates><panel_attributes>AdresatMenedzer
+konwerjsaIntNaString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>150</y><w>290</w><h>280</h></coordinates><panel_attributes>AdresatMenedzer
 --
 - idZalogowanegoUzytkownika : Integer
 - adresaci : vector &lt;Adresat&gt;
@@ -62,7 +62,7 @@ konwerjsaIntNaString() : String</panel_attributes><additional_attributes></addit
 - wyswietlDaneAdresata() : void
 - wyswietlIloscWyszukanychAdresatow() : void
 - podajIdWybranegoAdresata() : Integer
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>480</y><w>290</w><h>170</h></coordinates><panel_attributes>PlikZAdresatami
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>460</y><w>460</w><h>410</h></coordinates><panel_attributes>PlikZAdresatami
 --
 - NAZWA_PLIKU_Z_ADRESATAMI : String
 - idOstatniegoAdresata : Integer
