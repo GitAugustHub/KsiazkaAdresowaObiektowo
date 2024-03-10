@@ -2,6 +2,7 @@
 #define ADRESATMENEDZER_H
 
 #include <iostream>
+#include <string>
 #include <vector>
 #include <stdio.h> // zamiast <windows.h>
 #include <fstream>
@@ -35,9 +36,7 @@ public:
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdZalogowanegoUzytkownika();
-    // nalezy utworzyc setter dla pola idZalogowanego Uzytkownika w tej klasie
     void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
-    // i wywolac ja w metodzie logowanieUzytkownika() w klasie KsiazkaAdresowa - po ustawieniu idZUw klasieAdresatMenedzer
 
 };
 

@@ -113,3 +113,11 @@ void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweId)
     if(noweId >= 0)
         idZalogowanegoUzytkownika = noweId;
 }
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
+}

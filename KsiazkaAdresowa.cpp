@@ -27,7 +27,7 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMeneger->dodajAdresata(); // dlaczego tak?
+    adresatMeneger->dodajAdresata(); // z uwagi na AdresatMeneger *KsiazkaAdresowa::adresatMeneger
 }
 
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()

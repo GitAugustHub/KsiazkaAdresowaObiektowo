@@ -12,24 +12,29 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
     string imie;
     cout << "Podaj imie: ";
+    imie = metodyPomocnicze.wczytajLinie();
     adresat.ustawImie(imie);
     // adresat.imie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.imie);
 
     string nazwisko;
     cout << "Podaj nazwisko: ";
+    nazwisko = metodyPomocnicze.wczytajLinie();
     adresat.ustawNazwisko(nazwisko);
     // adresat.ustawNazwisko(nazwisko) = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.ustawNazwisko(nazwisko));
 
     string numerTelefonu;
     cout << "Podaj numer telefonu: ";
+    numerTelefonu = metodyPomocnicze.wczytajLinie();
     adresat.ustawNumerTelefonu(numerTelefonu);
 
     string email;
     cout << "Podaj email: ";
+    email = metodyPomocnicze.wczytajLinie();
     adresat.ustawEmail(email);
 
     string adres;
     cout << "Podaj adres: ";
+    adres = metodyPomocnicze.wczytajLinie();
     adresat.ustawAdres(adres);
 
     return adresat;

@@ -10,14 +10,13 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer *adresatMeneger; // dlaczego musi tu być * ??
+    AdresatMenedzer *adresatMeneger; // dlaczego musi tu być * ? ponieważ pojawia się błąd <no default constructor exists for class "AdresatMenedzer">
     PlikZAdresatami plikZAdresatami;
     int idZalogowanegoUzytkownika;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), plikZAdresatami(nazwaPlikuZAdresatami, nazwaTymczasowegoPlikuZAdresatami) 
     {
-        //uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
     bool czyUzytkownikJestZalogowany();
     void rejestracjaUzytkownika();
