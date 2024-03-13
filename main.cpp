@@ -74,9 +74,7 @@ int main()
                 //ksiazkaAdresowa.wyszukiwaniePoNazwisku();
                 break;
             case '4':
-                cout << "Wyświetlanie jeszcze nie działa" << endl;
-                cin.get();
-                //ksiazkaAdresowa.wyswietlAdresatow();
+                ksiazkaAdresowa.wyswietlAdresatow();
                 break;
             case '5':
                 cout << "Usuwanie jeszcze nie działa" << endl;

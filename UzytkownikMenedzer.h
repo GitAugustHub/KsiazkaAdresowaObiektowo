@@ -24,16 +24,15 @@ class UzytkownikMenedzer
     bool czyIstniejeLogin(string login);
 
 public:
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) 
+    UzytkownikMenedzer(string NAZWA_PLIKU_Z_UZYTKOWNIKAMI, int ID_ZALOGOWANEGO_UZYTKOWNIKA = 0) : plikZUzytkownikami(NAZWA_PLIKU_Z_UZYTKOWNIKAMI), idZalogowanegoUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA) 
     {
-        idZalogowanegoUzytkownika = 0;
+        
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void logowanieUzytkownika();
-    void wczytajUzytkownikowZPliku();
+    int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
     bool czyUzytkownikJestZalogowany();

@@ -15,7 +15,8 @@ using namespace std;
 
 class AdresatMenedzer
 {
-    const int idZalogowanegoUzytkownika;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
+   //  const string NAZWA_PLIKU_Z_ADRESATAMI;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
@@ -25,10 +26,10 @@ class AdresatMenedzer
     int podajIdWybranegoAdresata();
 
 public:
-    AdresatMenedzer(string NAZWAPLIKUZADRESATAMI, string NAZWATYMCZASOWEGOPLIKUZADRESATAMI, int IDZALOGOWANEGOUZYTKOWNIKA)
-        : plikZAdresatami(NAZWAPLIKUZADRESATAMI, NAZWATYMCZASOWEGOPLIKUZADRESATAMI), idZalogowanegoUzytkownika(IDZALOGOWANEGOUZYTKOWNIKA)
+    AdresatMenedzer(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami, int idZalogowanegoUzytkownika) // w konstruktorze odbieram przy tworzeniu nazwy plikow i id uzytkownika, ktore przypisuje do stalej - niemozliwej do zmiany przez zadna metode
+        : plikZAdresatami(nazwaPlikuZAdresatami, nazwaTymczasowegoPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
     {
-        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();

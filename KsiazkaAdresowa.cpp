@@ -13,7 +13,17 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenedzer.logowanieUzytkownika();
-    idZalogowanegoUzytkownika = pobierzIdZalogowanegoUzytkownika();
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    }
+}
+
+void KsiazkaAdresowa::wylogowanieUzytkownika()
+{
+    uzytkownikMenedzer.wylogowanieUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
 }
 
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
@@ -27,7 +37,7 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenedzer -> dodajAdresata(); // z uwagi na AdresatMeneger *KsiazkaAdresowa::adresatMeneger
+    adresatMenedzer->dodajAdresata(); // z uwagi na wywolanie metody wskaznika uzywa sie operatora strzalki ->
 }
 
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()

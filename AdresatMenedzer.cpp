@@ -1,6 +1,24 @@
 #include "AdresatMenedzer.h"
 #include "KsiazkaAdresowa.h"
 
+
+void AdresatMenedzer::dodajAdresata()
+{
+    Adresat adresat;
+
+    system("cls");
+    cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
+    adresat = podajDaneNowegoAdresata();
+
+    adresaci.push_back(adresat);
+    if (plikZAdresatami.dopiszAdresataDoPliku(adresat))
+    cout << "Nowy adresat zostal dodany" << endl;
+    else
+    cout << "Nie udalo sie dodac nowego adresata" << endl;
+    cin.get();
+
+}
+
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
@@ -8,7 +26,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
 
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     string imie;
     cout << "Podaj imie: ";
@@ -42,7 +60,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
 int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
-    return idZalogowanegoUzytkownika;
+    return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
 int AdresatMenedzer::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
@@ -64,7 +82,7 @@ int AdresatMenedzer::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(strin
 
 void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 }
 
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
