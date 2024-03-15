@@ -9,7 +9,7 @@ string MetodyPomocnicze::konwerjsaIntNaString(int liczba)
     return str;
 }
 
-int konwersjaStringNaInt(string liczba)
+int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
 {
     int liczbaInt;
     istringstream iss(liczba);
@@ -35,7 +35,7 @@ string MetodyPomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku)
     return liczba;
 }
 
-int wczytajLiczbeCalkowita()
+int MetodyPomocnicze::wczytajLiczbeCalkowita()
 {
     string wejscie = "";
     int liczba = 0;
@@ -50,4 +50,15 @@ int wczytajLiczbeCalkowita()
         cout << "To nie jest liczba. Wpisz ponownie. " << endl;
     }
     return liczba;
+}
+
+void MetodyPomocnicze::czyscEkran() 
+{
+    cout << "\033[2J\033[1;1H"; // Sekwencja czyszczaca ANSI
+}
+
+void MetodyPomocnicze::czekajNaWcisniecieKlawisza() 
+{
+    cout << "Nacisnij klawisz ENTER by kontynuowac...";
+    cin.ignore(numeric_limits <streamsize> :: max(), '\n');
 }

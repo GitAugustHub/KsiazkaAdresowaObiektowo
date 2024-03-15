@@ -14,6 +14,8 @@ public:
     string wczytajLinie();
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     int wczytajLiczbeCalkowita();
+    void czyscEkran();
+    void czekajNaWcisniecieKlawisza();
 };
 
 #endif

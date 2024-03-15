@@ -8,6 +8,14 @@ bool PlikZAdresatami::czyPlikJestPusty(fstream &plikTekstowy)
     else
         return false;
 }
+string PlikZAdresatami::pobierzNazwePliku()
+{
+    return NAZWA_PLIKU_Z_ADRESATAMI;
+}
+string PlikZAdresatami::pobierzNazweTymczasowegoPliku()
+{
+    return NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
+}
 
 bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
@@ -186,6 +194,11 @@ int PlikZAdresatami::pobierzZPlikuIdOstatniegoAdresata()
     {
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
     }
+    return idOstatniegoAdresata;
+}
+
+int PlikZAdresatami::pobierzIdOstatniegoAdresata()
+{
     return idOstatniegoAdresata;
 }
 

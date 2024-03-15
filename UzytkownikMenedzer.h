@@ -17,7 +17,6 @@ class UzytkownikMenedzer
     int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
     PlikZUzytkownikami plikZUzytkownikami;
-    MetodyPomocnicze metodyPomocnicze;
 
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
@@ -26,14 +25,13 @@ class UzytkownikMenedzer
 public:
     UzytkownikMenedzer(string NAZWA_PLIKU_Z_UZYTKOWNIKAMI, int ID_ZALOGOWANEGO_UZYTKOWNIKA = 0) : plikZUzytkownikami(NAZWA_PLIKU_Z_UZYTKOWNIKAMI), idZalogowanegoUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA) 
     {
-        
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    int logowanieUzytkownika();
-    void zmianaHaslaZalogowanegoUzytkownika();
+    void logowanieUzytkownika();
+    //void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
     bool czyUzytkownikJestZalogowany();
     int pobierzIdZalogowanegoUzytkownika();

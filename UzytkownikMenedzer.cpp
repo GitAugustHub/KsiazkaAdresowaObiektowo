@@ -2,12 +2,13 @@
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
+    MetodyPomocnicze metodyPomocnicze;
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
     uzytkownicy.push_back(uzytkownik);
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
-    system("pause");
+    metodyPomocnicze.czekajNaWcisniecieKlawisza();
 }
 
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
@@ -64,13 +65,15 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
     }
 }
 
-int UzytkownikMenedzer::logowanieUzytkownika()
+void UzytkownikMenedzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
+    MetodyPomocnicze metodyPomocnicze;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    login = metodyPomocnicze.wczytajLinie();
+    // login = metodyPomocnicze.wczytajLinie();
+    cin >> login;
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
     while (itr != uzytkownicy.end())
@@ -80,24 +83,29 @@ int UzytkownikMenedzer::logowanieUzytkownika()
             for (int iloscProb = 3; iloscProb > 0; iloscProb--)
             {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
-                haslo = metodyPomocnicze.wczytajLinie();
+                // haslo = metodyPomocnicze.wczytajLinie(); 
+                cin >> haslo;
 
                 if (itr -> pobierzHaslo() == haslo)
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause"); //cin.get();
                     idZalogowanegoUzytkownika = itr -> pobierzId();
-                    return idZalogowanegoUzytkownika;
+                    metodyPomocnicze.czekajNaWcisniecieKlawisza();
+                    return;
+                    // return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
-            system("pause"); //cin.get();
-            return 0;
+            idZalogowanegoUzytkownika = 0;
+            metodyPomocnicze.czekajNaWcisniecieKlawisza();
+            return;
+            // return idZalogowanegoUzytkownika;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
-    cin.get();
+    metodyPomocnicze.czekajNaWcisniecieKlawisza();
+    return;
 }
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()

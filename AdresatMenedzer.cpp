@@ -6,7 +6,7 @@ void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
 
-    system("cls");
+    metodyPomocnicze.czyscEkran();
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
     adresat = podajDaneNowegoAdresata();
 
@@ -15,7 +15,7 @@ void AdresatMenedzer::dodajAdresata()
     cout << "Nowy adresat zostal dodany" << endl;
     else
     cout << "Nie udalo sie dodac nowego adresata" << endl;
-    cin.get();
+    metodyPomocnicze.czekajNaWcisniecieKlawisza();
 
 }
 
@@ -97,7 +97,7 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
-    system("cls");
+    metodyPomocnicze.czyscEkran();
     if (!adresaci.empty())
     {
         cout << "             >>> ADRESACI <<<" << endl;

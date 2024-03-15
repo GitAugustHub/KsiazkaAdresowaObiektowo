@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    MetodyPomocnicze metodyPomocnicze;
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt", "Adresaci_tymczasowy.txt");
 
     char wybor;
@@ -14,7 +15,7 @@ int main()
     {
         if (!ksiazkaAdresowa.czyUzytkownikJestZalogowany())
         {
-            system("cls");
+            metodyPomocnicze.czyscEkran();
             cout << "    >>> MENU  GLOWNE <<<" << endl;
             cout << "---------------------------" << endl;
             cout << "1. Rejestracja" << endl;
@@ -37,13 +38,13 @@ int main()
                 break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
-                system("pause");
+                metodyPomocnicze.czekajNaWcisniecieKlawisza();
                 break;
             }
         }
-        else
+        else 
         {
-            system("cls");
+            metodyPomocnicze.czyscEkran();
             cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
             cout << "---------------------------" << endl;
             cout << "1. Dodaj adresata" << endl;
@@ -98,7 +99,7 @@ int main()
                 break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
-                system("pause");
+                metodyPomocnicze.czekajNaWcisniecieKlawisza();
                 break;
             }
         }

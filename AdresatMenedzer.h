@@ -21,9 +21,8 @@ class AdresatMenedzer
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
 
-    Adresat podajDaneNowegoAdresata(); 
-    void wyswietlDaneAdresata(Adresat adresat);
-    int podajIdWybranegoAdresata();
+    Adresat podajDaneNowegoAdresata();
+    
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami, int idZalogowanegoUzytkownika) // w konstruktorze odbieram przy tworzeniu nazwy plikow i id uzytkownika, ktore przypisuje do stalej - niemozliwej do zmiany przez zadna metode
@@ -33,6 +32,8 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyswietlDaneAdresata(Adresat adresat);
+    int podajIdWybranegoAdresata();
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdZalogowanegoUzytkownika();

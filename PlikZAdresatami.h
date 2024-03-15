@@ -37,6 +37,8 @@ public:
     int pobierzIdOstatniegoAdresata();
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    string pobierzNazwePliku();
+    string pobierzNazweTymczasowegoPliku();
     
 };
 
