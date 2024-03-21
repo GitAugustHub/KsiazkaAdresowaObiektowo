@@ -52,7 +52,7 @@ int KsiazkaAdresowa::przekazIdZalogowanegoUzytkownika()
 
 void KsiazkaAdresowa::wyswietlAdresatow()
 {
-    adresatMenedzer -> wyswietlWszystkichAdresatow();
+    adresatMenedzer->wyswietlWszystkichAdresatow();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()

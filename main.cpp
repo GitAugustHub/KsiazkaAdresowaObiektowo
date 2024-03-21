@@ -87,9 +87,7 @@ int main()
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
-                cout << "Wylogowanie jeszcze nie działa" << endl;
-                cin.get();
-                //ksiazkaAdresowa.wylogowanieUzytkownika();
+                ksiazkaAdresowa.wylogowanieUzytkownika();
                 break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
