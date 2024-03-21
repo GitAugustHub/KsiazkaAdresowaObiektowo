@@ -253,11 +253,12 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
             }
         }
         daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
+        return adresaci;
         plikTekstowy.close();
     }
     else
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
-
+    return adresaci;
     plikTekstowy.close();
 
     if (daneOstaniegoAdresataWPliku != "")

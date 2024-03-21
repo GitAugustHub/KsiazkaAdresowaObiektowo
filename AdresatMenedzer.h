@@ -10,6 +10,7 @@
 
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
@@ -38,6 +39,8 @@ public:
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdZalogowanegoUzytkownika();
     void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
+    void wyszukajAdresatowPoImieniu();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 };
 

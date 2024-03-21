@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     MetodyPomocnicze metodyPomocnicze;
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt", "Adresaci_tymczasowy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("/Users/macbook/Desktop/PROGRAM/PROJEKTY/C++_projekty/16_KsiazkaAdresowaObiektowoProjektArtura/Uzytkownicy.txt", "/Users/macbook/Desktop/PROGRAM/PROJEKTY/C++_projekty/16_KsiazkaAdresowaObiektowoProjektArtura/Adresaci.txt", "/Users/macbook/Desktop/PROGRAM/PROJEKTY/C++_projekty/16_KsiazkaAdresowaObiektowoProjektArtura/Adresaci_tymczasowy.txt");
 
     char wybor;
 
@@ -65,9 +65,7 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                //ksiazkaAdresowa.wyszukiwaniePoImieniu();
-                cout << "Wyszukiwanie jeszcze nie działa" << endl;
-                cin.get();
+                ksiazkaAdresowa.wyszukiwaniePoImieniu();
                 break;
             case '3':
                 cout << "Wyszukiwanie jeszcze nie działa" << endl;
@@ -88,9 +86,7 @@ int main()
                 cin.get();
                 break;
             case '7':
-                // ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-                cout << "Zmiana hasla jeszcze nie działa" << endl;
-                cin.get();
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 cout << "Wylogowanie jeszcze nie działa" << endl;

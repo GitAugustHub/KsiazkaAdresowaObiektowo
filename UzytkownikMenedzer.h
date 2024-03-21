@@ -30,12 +30,12 @@ public:
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void logowanieUzytkownika();
-    //void zmianaHaslaZalogowanegoUzytkownika();
+    int logowanieUzytkownika();
     void wylogowanieUzytkownika();
     bool czyUzytkownikJestZalogowany();
     int pobierzIdZalogowanegoUzytkownika();
     void ustawIdZalogowanegoUzytkownika(int noweId);
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif

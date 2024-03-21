@@ -34,6 +34,8 @@ public:
     int pobierzIdZalogowanegoUzytkownika();
     int przekazIdZalogowanegoUzytkownika();
     void wyswietlAdresatow();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void wyszukiwaniePoImieniu();
 };
 
 #endif
