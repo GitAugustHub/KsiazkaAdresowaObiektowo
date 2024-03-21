@@ -142,7 +142,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
         {
             itr -> pobierzHaslo() = noweHaslo;
             cout << "Haslo zostalo zmienione." << endl << endl;
-            system("pause");
+            metodyPomocnicze.czekajNaWcisniecieKlawisza();
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku();

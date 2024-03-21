@@ -41,6 +41,7 @@ public:
     void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
     void wyszukajAdresatowPoImieniu();
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+    void wyszukajAdresatowPoNazwisku();
 
 };
 

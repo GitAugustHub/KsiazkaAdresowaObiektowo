@@ -112,7 +112,7 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow()
     {
         cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
     }
-    system("pause");
+    metodyPomocnicze.czekajNaWcisniecieKlawisza();
 }
 
 int AdresatMenedzer::podajIdWybranegoAdresata()
@@ -129,7 +129,7 @@ void AdresatMenedzer::wyszukajAdresatowPoImieniu()
     string imiePoszukiwanegoAdresata = "";
     int iloscAdresatow = 0;
 
-    system("cls");
+    metodyPomocnicze.czyscEkran();
     if (!adresaci.empty())
     {
         cout << ">>> WYSZUKIWANIE ADRESATOW O IMIENIU <<<" << endl << endl;
@@ -153,7 +153,7 @@ void AdresatMenedzer::wyszukajAdresatowPoImieniu()
         cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
     }
     cout << endl;
-    system("pause");
+    metodyPomocnicze.czekajNaWcisniecieKlawisza();
 }
 
 void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
@@ -162,4 +162,36 @@ void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
         cout << endl << "W ksiazce adresowej nie ma adresatow z tymi danymi." << endl;
     else
         cout << endl << "Ilosc adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
+}
+
+void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
+{
+    string nazwiskoPoszukiwanegoAdresata = "";
+    int iloscAdresatow = 0;
+
+    metodyPomocnicze.czyscEkran();
+    if (!adresaci.empty())
+    {
+        cout << ">>> WYSZUKIWANIE ADRESATOW O NAZWISKU <<<" << endl << endl;
+
+        metodyPomocnicze.wczytajLinie();
+        cout << "Wyszukaj adresatow o nazwisku: ";
+        nazwiskoPoszukiwanegoAdresata = metodyPomocnicze.wczytajLinie();
+
+        for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            if (itr -> pobierzNazwisko() == nazwiskoPoszukiwanegoAdresata)
+            {
+                wyswietlDaneAdresata(*itr);
+                iloscAdresatow++;
+            }
+        }
+        wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    cout << endl;
+    metodyPomocnicze.czekajNaWcisniecieKlawisza();
 }

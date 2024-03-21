@@ -63,5 +63,9 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 void KsiazkaAdresowa::wyszukiwaniePoImieniu()
 {
     adresatMenedzer->wyszukajAdresatowPoImieniu();
+}
 
+void KsiazkaAdresowa::wyszukiwaniePoNazwisku()
+{
+    adresatMenedzer->wyszukajAdresatowPoNazwisku();
 }
