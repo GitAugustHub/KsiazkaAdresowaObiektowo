@@ -12,6 +12,7 @@ public:
     static string konwerjsaIntNaString(int liczba);
     int konwersjaStringNaInt(string liczba);
     string wczytajLinie();
+    char wczytajZnak();
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     int wczytajLiczbeCalkowita();
     void czyscEkran();

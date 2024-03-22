@@ -195,3 +195,45 @@ void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
     cout << endl;
     metodyPomocnicze.czekajNaWcisniecieKlawisza();
 }
+
+void AdresatMenedzer::usunAdresata()
+{
+    
+    int idUsuwanegoAdresata = 0;
+
+    metodyPomocnicze.czyscEkran();
+    cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
+    idUsuwanegoAdresata = podajIdWybranegoAdresata();
+
+    char znak;
+    bool czyIstniejeAdresat = false;
+
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    {
+        if (itr -> pobierzId() == idUsuwanegoAdresata)
+        {
+            czyIstniejeAdresat = true;
+            cout << endl << "Potwierdz naciskajac klawisz 't': ";
+            znak = metodyPomocnicze.wczytajZnak();
+            if (znak == 't')
+            {
+                plikZAdresatami.usunWybranaLinieWPliku(idUsuwanegoAdresata);
+                adresaci.erase(itr);
+                cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
+                metodyPomocnicze.czekajNaWcisniecieKlawisza();
+                return;
+            }
+            else
+            {
+                cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
+                metodyPomocnicze.czekajNaWcisniecieKlawisza();
+                return;
+            }
+        }
+    }
+    if (czyIstniejeAdresat == false)
+    {
+        cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
+        metodyPomocnicze.czekajNaWcisniecieKlawisza();
+    }
+}

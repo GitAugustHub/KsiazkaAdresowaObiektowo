@@ -40,6 +40,11 @@ void KsiazkaAdresowa::dodajAdresata()
     adresatMenedzer->dodajAdresata(); // z uwagi na wywolanie metody wskaznika uzywa sie operatora strzalki ->
 }
 
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer->usunAdresata();
+}
+
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 {
     return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();

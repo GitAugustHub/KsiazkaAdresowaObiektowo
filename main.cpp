@@ -74,9 +74,7 @@ int main()
                 ksiazkaAdresowa.wyswietlAdresatow();
                 break;
             case '5':
-                cout << "Usuwanie jeszcze nie działa" << endl;
-                cin.get();
-                //ksiazkaAdresowa.usunAdresata();
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
                 // ksiazkaAdresowa.edytujAdresata();

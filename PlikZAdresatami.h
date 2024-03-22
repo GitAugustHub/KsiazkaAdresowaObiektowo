@@ -21,10 +21,9 @@ class PlikZAdresatami
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     // int pobierzUzytkownikaZDanychOddzielonychPionowymiKreskami();
     int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
-    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
     int pobierzZPlikuIdOstatniegoAdresata();
     void usunPlik(string nazwaPlikuZRozszerzeniem); // moze przeniesc do metodPomocniczych?
-    void zmienNazwePliku(string staraNazwa, string nowaNazwa); // moze przeniesc do metodPomocniczych?
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
     
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami) 
@@ -39,7 +38,8 @@ public:
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     string pobierzNazwePliku();
     string pobierzNazweTymczasowegoPliku();
-    
+    void usunWybranaLinieWPliku(int idUsuwanegoAdresata);
+
 };
 
 #endif
