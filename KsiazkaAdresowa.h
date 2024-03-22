@@ -32,6 +32,7 @@ public:
     void wylogowanieUzytkownika();
     void dodajAdresata();
     void usunAdresata();
+    void edytujAdresata();
     int pobierzIdZalogowanegoUzytkownika();
     int przekazIdZalogowanegoUzytkownika();
     void wyswietlAdresatow();

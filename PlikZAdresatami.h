@@ -39,6 +39,8 @@ public:
     string pobierzNazwePliku();
     string pobierzNazweTymczasowegoPliku();
     void usunWybranaLinieWPliku(int idUsuwanegoAdresata);
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void edytujWybranaLinieWPliku(string liniaZDanymiAdresataOddzielonePionowymiKreskami, int idEdytowanegoAdresata);
 
 };
 

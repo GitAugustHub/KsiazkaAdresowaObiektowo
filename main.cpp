@@ -77,9 +77,7 @@ int main()
                 ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-                // ksiazkaAdresowa.edytujAdresata();
-                cout << "Edytowanie jeszcze nie działa" << endl;
-                cin.get();
+                ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
